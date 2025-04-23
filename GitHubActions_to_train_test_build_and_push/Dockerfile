@@ -5,12 +5,10 @@ FROM python:3.10-slim
 ADD GitHubActions_to_train_test_build_and_push/titanic_model_api /titanic_model_api/
 
 # specify working directory
-WORKDIR GitHubActions_to_train_test_build_and_push/titanic_model_api
+WORKDIR /GitHubActions_to_train_test_build_and_push/titanic_model_api
 
 # update pip
 RUN pip install --upgrade pip
-
-RUN $PWD
 
 # install dependencies
 RUN pip install -r requirements.txt
