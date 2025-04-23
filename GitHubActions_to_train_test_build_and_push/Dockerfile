@@ -10,8 +10,10 @@ WORKDIR GitHubActions_to_train_test_build_and_push/titanic_model_api
 # update pip
 RUN pip install --upgrade pip
 
+RUN $PWD
+
 # install dependencies
-RUN pip install -r GitHubActions_to_train_test_build_and_push/titanic_model_api/requirements.txt
+RUN pip install -r requirements.txt
 
 # expose port for application
 EXPOSE 8001
