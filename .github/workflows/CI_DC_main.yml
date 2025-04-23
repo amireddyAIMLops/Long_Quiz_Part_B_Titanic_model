@@ -60,7 +60,7 @@ jobs:
     - uses: actions/download-artifact@v4
       with:
         name: my-trained-pipeline
-        path: titanic_model/trained_models
+        path: GitHubActions_to_train_test_build_and_push/titanic_model/trained_models
     - name: Install dependencies
       run: pip install --upgrade build
     - name: Build package
