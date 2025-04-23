@@ -64,7 +64,7 @@ jobs:
     - name: Install dependencies
       run: pip install --upgrade build
     - name: Build package
-      run: python -m build
+      run: cd  GitHubActions_to_train_test_build_and_push/ && python -m build
     - uses: actions/upload-artifact@v4
       with:
         name: my-build-package
